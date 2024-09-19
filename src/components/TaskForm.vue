@@ -25,6 +25,8 @@ export default {
         newTask.value = "";
       }
     };
+
+    return { handleSubmit, newTask };
   },
 };
 </script>
