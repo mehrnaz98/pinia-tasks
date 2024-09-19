@@ -14,6 +14,17 @@ export default {
     const taskStore = useTaskStore();
 
     const newTask = ref("");
+
+    const handleSubmit = () => {
+      if (newTask.value.length > 0) {
+        taskStore.addTask({
+          title: newTask.value,
+          isFav: false,
+          id: Date.now(),
+        });
+        newTask.value = "";
+      }
+    };
   },
 };
 </script>
