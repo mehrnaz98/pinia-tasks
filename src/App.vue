@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import TaskDetails from "./components/TaskDetails.vue";
 import { useTaskStore } from "./stores/TaskStore";
 export default {
   setup() {
