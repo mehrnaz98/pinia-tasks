@@ -36,9 +36,10 @@
 <script>
 import { ref } from "vue";
 import TaskDetails from "./components/TaskDetails.vue";
+import TaskForm from "./components/TaskForm.vue";
 import { useTaskStore } from "./stores/TaskStore";
 export default {
-  components: { TaskDetails },
+  components: { TaskDetails, TaskForm },
   setup() {
     const taskStore = useTaskStore();
 
