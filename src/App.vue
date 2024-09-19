@@ -31,7 +31,9 @@ export default {
   setup() {
     const taskStore = useTaskStore();
 
-    return { taskStore };
+    const filter = ref("all");
+
+    return { taskStore, filter };
   },
 };
 </script>
