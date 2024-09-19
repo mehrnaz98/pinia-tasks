@@ -19,6 +19,7 @@
 import TaskDetails from "./components/TaskDetails.vue";
 import { useTaskStore } from "./stores/TaskStore";
 export default {
+  components: { TaskDetails },
   setup() {
     const taskStore = useTaskStore();
 
