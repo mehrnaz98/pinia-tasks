@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import TaskDetails from "./components/TaskDetails.vue";
 import { useTaskStore } from "./stores/TaskStore";
 export default {
