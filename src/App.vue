@@ -7,8 +7,15 @@
     </header>
 
     <!--task list-->
+    <p>All tasks</p>
     <div class="task-list">
       <div v-for="task in taskStore.tasks" :key="task.id">
+        <TaskDetails :task="task" />
+      </div>
+    </div>
+    <p>Favorite tasks</p>
+    <div class="task-list">
+      <div v-for="task in taskStore.favs" :key="task.id">
         <TaskDetails :task="task" />
       </div>
     </div>
