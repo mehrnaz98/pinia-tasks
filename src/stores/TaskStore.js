@@ -17,5 +17,8 @@ export const useTaskStore = defineStore("taskStore", {
         return c.isFav ? p + 1 : p;
       }, 0);
     },
+    totalCount: (state) => {
+      return state.tasks.length;
+    },
   },
 });
