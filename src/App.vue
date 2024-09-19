@@ -9,7 +9,12 @@
 </template>
 
 <script>
+import { useTaskStore } from "./stores/TaskStore";
 export default {
-  setup() {},
+  setup() {
+    const TaskStore = useTaskStore();
+
+    return { TaskStore };
+  },
 };
 </script>
