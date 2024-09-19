@@ -13,14 +13,14 @@
     </nav>
 
     <!--task list-->
-    <p>All tasks</p>
     <div class="task-list" v-if="filter === 'all'">
+      <p>All tasks</p>
       <div v-for="task in taskStore.tasks" :key="task.id">
         <TaskDetails :task="task" />
       </div>
     </div>
-    <p>Favorite tasks</p>
     <div class="task-list" v-if="filter === 'favs'">
+      <p>Favorite tasks</p>
       <div v-for="task in taskStore.favs" :key="task.id">
         <TaskDetails :task="task" />
       </div>
