@@ -9,7 +9,7 @@
     <!--task list-->
     <div class="task-list">
       <div v-for="task in taskStore.tasks" :key="task.id">
-        {{ task.title }}
+        <p>{{ task.title }}</p>
       </div>
     </div>
   </main>
