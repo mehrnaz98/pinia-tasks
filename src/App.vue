@@ -12,9 +12,9 @@
 import { useTaskStore } from "./stores/TaskStore";
 export default {
   setup() {
-    const TaskStore = useTaskStore();
+    const taskStore = useTaskStore();
 
-    return { TaskStore };
+    return { taskStore };
   },
 };
 </script>
