@@ -12,6 +12,8 @@ import { useTaskStore } from "../stores/TaskStore";
 export default {
   setup() {
     const taskStore = useTaskStore();
+
+    const newTask = ref("");
   },
 };
 </script>
