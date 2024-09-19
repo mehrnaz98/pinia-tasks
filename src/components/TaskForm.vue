@@ -10,6 +10,8 @@ import { ref } from "vue";
 import { useTaskStore } from "../stores/TaskStore";
 
 export default {
-  setup() {},
+  setup() {
+    const taskStore = useTaskStore();
+  },
 };
 </script>
