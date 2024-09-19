@@ -6,5 +6,10 @@
 </template>
 
 <script>
-export default {};
+import { ref } from "vue";
+import { useTaskStore } from "../stores/TaskStore";
+
+export default {
+  setup() {},
+};
 </script>
