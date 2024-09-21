@@ -43,9 +43,13 @@ export const useTaskStore = defineStore("taskStore", {
         console.log(res.error);
       }
     },
-    deleteTask(id) {
+    async deleteTask(id) {
       this.tasks = this.tasks.filter((t) => {
         return t.id !== id;
+      });
+
+      const res = await fetch("http://localhost:3000/tasks/" + id, {
+        method: "DELETE",
       });
     },
     toggleFav(id) {
