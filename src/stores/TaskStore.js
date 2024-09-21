@@ -30,8 +30,14 @@ export const useTaskStore = defineStore("taskStore", {
       this.tasks = data;
       this.loading = false;
     },
-    addTask(task) {
+    async addTask(task) {
       this.tasks.push(task);
+
+      const res = await fetch("http://localhost:3000/tasks", {
+        method: "POST",
+        body: JSON.stringify(task),
+        headers: { "Content-Type": "application/json" },
+      });
     },
     deleteTask(id) {
       this.tasks = this.tasks.filter((t) => {
