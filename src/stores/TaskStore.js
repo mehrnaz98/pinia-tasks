@@ -38,6 +38,10 @@ export const useTaskStore = defineStore("taskStore", {
         body: JSON.stringify(task),
         headers: { "Content-Type": "application/json" },
       });
+
+      if (res.error) {
+        console.log(res.error);
+      }
     },
     deleteTask(id) {
       this.tasks = this.tasks.filter((t) => {
