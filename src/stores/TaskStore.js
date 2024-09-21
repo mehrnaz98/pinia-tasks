@@ -65,6 +65,10 @@ export const useTaskStore = defineStore("taskStore", {
         body: JSON.stringify({ isFav: task.isFav }),
         headers: { "Content-Type": "application/json" },
       });
+
+      if (res.error) {
+        console.log(res.error);
+      }
     },
   },
 });
