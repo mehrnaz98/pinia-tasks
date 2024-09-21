@@ -1,6 +1,14 @@
-# pinia-tasks
+# Pinia tasks
 
-This template should help get you started developing with Vue 3 in Vite.
+Pinia tasks app is designed to help users organize and manage their tasks effectively. Built using Vue.js and Pinia for state management, this app allows users to add, delete, and update tasks while marking their favorites.
+
+## Live Demo
+
+You can view the live version of this project here: [View on Netlify](https://venerable-empanada-8399a2.netlify.app/)
+
+## Project Acknowledgment
+
+This project was developed as part of the Pinia Crash Course in Net Ninja channel.
 
 ## Recommended IDE Setup
 
