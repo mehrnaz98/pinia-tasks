@@ -23,12 +23,24 @@ export const useTaskStore = defineStore("taskStore", {
   actions: {
     async getTasks() {
       this.loading = true;
+      try {
+        // Try fetching tasks from the server
+        const res = await fetch("http://localhost:3000/tasks");
 
-      const res = await fetch("http://localhost:3000/tasks");
-      const data = await res.json();
+        if (!res.ok) {
+          throw new Error("Failed to fetch tasks from server");
+        }
 
-      this.tasks = data;
-      this.loading = false;
+        const data = await res.json();
+        this.tasks = data;
+      } catch (error) {
+        console.error(
+          "Server is unavailable, loading local tasks only:",
+          error
+        );
+      } finally {
+        this.loading = false;
+      }
     },
     async addTask(task) {
       this.tasks.push(task);
