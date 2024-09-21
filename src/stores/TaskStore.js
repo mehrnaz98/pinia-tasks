@@ -4,7 +4,7 @@ export const useTaskStore = defineStore("taskStore", {
   state: () => ({
     tasks: [
       {
-        id: 1,
+        id: 1726933373222,
         title: "Do homework",
         isFav: false,
       },
